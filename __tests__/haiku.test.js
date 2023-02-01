@@ -29,6 +29,8 @@ describe('Rule1', () => {
     expect(Rule1('diaeresis')).toBe(4);
     expect(Rule1('diet')).toBe(2);
     expect(Rule1('able')).toBe(2);
+    expect(Rule1('plae')).toBe(1);
+    expect(Rule1('bee')).toBe(1);
     expect(Rule1('tape')).toBe(1); //silent e is not counted as a vowel
     expect(Rule1('loud')).toBe(1); //When two vowels carry one sound (diphthong), they cannot be divided
     expect(Rule1('many')).toBe(2); //The letter “y” is not strictly a vowel but behaves like one.
