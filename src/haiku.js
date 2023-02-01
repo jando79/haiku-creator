@@ -18,9 +18,16 @@ export function Vowel(input) {
     }
 }
 
+
 export function Rule1(input) {
   let vowelCount = 0;
+  let array = input.split("");
   vowelCount = countInstances(input, 'a') + countInstances(input, 'o') + countInstances(input, 'e') + countInstances(input, 'i') + countInstances(input, 'u') + countInstances(input, 'y');
-  return vowelCount;
+  if (array[array.length - 1] === 'e' && vowelCount > 1) {
+    return vowelCount - 1;
+  }
+  else {
+    return vowelCount;
+  }
 }
 
