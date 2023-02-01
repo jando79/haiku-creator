@@ -56,3 +56,6 @@ export function BreakIntoLines(input) {
   outputArray.push(input);
   return outputArray;
 }
+
+export function CountSyllables(input) {
+}

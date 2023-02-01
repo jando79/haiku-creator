@@ -2,6 +2,7 @@ import { Lines } from './../src/haiku.js';
 import { Vowel } from './../src/haiku.js';
 import { Rule1 } from './../src/haiku.js';
 import { BreakIntoLines } from './../src/haiku.js';
+import { CountSyllables } from './../src/haiku.js';
 
 describe('Lines', () => {
 
@@ -44,6 +45,13 @@ describe('BreakIntoLines', () => {
 
   test('it should return three separate lines', () => {
     expect(BreakIntoLines('A\nB\nC')).toEqual(['A', 'B', 'C']);
+});
+
+});
+
+describe('CountSyllables', () => {
+  test('it should count how many syllables are in one line', () => {
+    expect(CountSyllables('My name is Molly')).toEqual(5);
 });
 
 });
