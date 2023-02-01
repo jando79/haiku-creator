@@ -65,3 +65,6 @@ export function CountSyllables(input) {
   })
   return totalCount;
 }
+
+export function ifHaiku(input) {
+}

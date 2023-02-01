@@ -3,6 +3,8 @@ import { Vowel } from './../src/haiku.js';
 import { Rule1 } from './../src/haiku.js';
 import { BreakIntoLines } from './../src/haiku.js';
 import { CountSyllables } from './../src/haiku.js';
+import { ifHaiku } from './../src/haiku.js';
+
 
 describe('Lines', () => {
 
@@ -52,6 +54,15 @@ describe('BreakIntoLines', () => {
 describe('CountSyllables', () => {
   test('it should count how many syllables are in one line', () => {
     expect(CountSyllables('My name is Molly')).toEqual(5);
+});
+
+});
+
+describe('ifHaiku', () => {
+  test('it should return if the entry is a Haiku', () => {
+    expect(ifHaiku(['My name is Molly', 'I love to eat spaghetti', 'Thank you for something'])).toEqual(true);
+    expect(ifHaiku(['My name is Molly', 'I love to eat', 'Thank you'])).toEqual(false);
+    
 });
 
 });
