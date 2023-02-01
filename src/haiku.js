@@ -30,7 +30,7 @@ export function Rule1(input) {
     });
 
   let diphCount = 0;
-  const diphVowels = ["oo", "ui", "ea", "ay", "ae", "oi", "ou", "oa", "ee", "ai", "eau", "oy", "ey"];
+  const diphVowels = ["oo", "ui", "ea", "ay", "ae", "oi", "ou", "oa", "ee", "ai", "eau", "oy", "ey", "ye"];
   diphVowels.forEach(function(element) {
     if (countInstances(input, element) > 0) {
       diphCount = diphCount + countInstances(input, element);
