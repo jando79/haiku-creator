@@ -46,5 +46,13 @@ export function Rule1(input) {
 } 
 
 export function BreakIntoLines(input) {
-  
+  let outputArray = [];
+  let indexOf = input.indexOf("\n");
+  outputArray.push(input.slice(0, indexOf));
+  input = input.slice(indexOf + 1, input.length);
+  indexOf = input.indexOf("\n");
+  outputArray.push(input.slice(0, indexOf));
+  input = input.slice(indexOf + 1, input.length);
+  outputArray.push(input);
+  return outputArray;
 }

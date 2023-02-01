@@ -43,7 +43,7 @@ describe('Rule1', () => {
 describe('BreakIntoLines', () => {
 
   test('it should return three separate lines', () => {
-    expect(BreakIntoLines('A\nB\nC')).toBe([["A"], ["B"], ["C"]]);
+    expect(BreakIntoLines('A\nB\nC')).toEqual(['A', 'B', 'C']);
 });
 
 });
