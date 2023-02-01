@@ -1,9 +1,9 @@
 
-function countInstances(string, word) {
+const countInstances = (string, word) => {
     return string.split(word).length - 1;
   }
 
-export function Lines(input) {
+export const Lines = (input) => {
   if (countInstances(input, "\n") === 2) {
     return 3;
   }
