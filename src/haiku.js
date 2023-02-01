@@ -37,7 +37,7 @@ export function Rule1(input) {
     }
   }) 
 
-  if (array[array.length - 1] === 'e' && vowelCount > 1) {
+  if (array[array.length - 1] === 'e' && vowelCount > 1 && array[array.length - 2] !== 'l') {
     return vowelCount - diphCount - 1;
   }
   else {
