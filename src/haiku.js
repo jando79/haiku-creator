@@ -58,4 +58,10 @@ export function BreakIntoLines(input) {
 }
 
 export function CountSyllables(input) {
+  let words = input.split(" ");
+  let totalCount = 0;
+  words.forEach(function(element) {
+    totalCount = totalCount + Rule1(element);
+  })
+  return totalCount;
 }
