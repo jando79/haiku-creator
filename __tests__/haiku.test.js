@@ -36,6 +36,7 @@ describe('Rule1', () => {
     expect(Rule1('plae')).toBe(1);
     expect(Rule1('bee')).toBe(1);
     expect(Rule1('yellow')).toBe(2);
+    expect(Rule1('I')).toBe(1);
     expect(Rule1('tape')).toBe(1); //silent e is not counted as a vowel
     expect(Rule1('loud')).toBe(1); //When two vowels carry one sound (diphthong), they cannot be divided
     expect(Rule1('many')).toBe(2); //The letter “y” is not strictly a vowel but behaves like one.
@@ -54,14 +55,16 @@ describe('BreakIntoLines', () => {
 describe('CountSyllables', () => {
   test('it should count how many syllables are in one line', () => {
     expect(CountSyllables('My name is Molly')).toEqual(5);
+    expect(CountSyllables('I like to eat spaghetti')).toEqual(7);
 });
 
 });
 
 describe('ifHaiku', () => {
   test('it should return if the entry is a Haiku', () => {
-    expect(ifHaiku(['My name is Molly', 'I love to eat spaghetti', 'Thank you for something'])).toEqual(true);
-    expect(ifHaiku(['My name is Molly', 'I love to eat', 'Thank you'])).toEqual(false);
+
+    expect(ifHaiku('My name is Molly\nI like to eat spaghetti\nPlease feed me some now')).toBe(true);
+    expect(ifHaiku('My name is Molly\nI love to eat\nThank you')).toBe(false);
     
 });
 

@@ -22,7 +22,7 @@ export function Rule1(input) {
   let array = input.split("");
 
   let vowelCount = 0;
-  const allVowels = ["a", "o", "e", "i", "u", "y"]
+  const allVowels = ["a", "o", "e", "i", "u", "y", "A", "O", "E", "I", "U", "Y"]
   allVowels.forEach(function(element) {
     if (countInstances(input, element) > 0) {
       vowelCount = vowelCount + countInstances(input, element);
@@ -67,4 +67,20 @@ export function CountSyllables(input) {
 }
 
 export function ifHaiku(input) {
+  if (Lines(input) === 3) {
+    let finalArray = [];
+    let newArray = BreakIntoLines(input);
+    newArray.forEach(function(element) {
+      finalArray.push(CountSyllables(element));
+    })
+    if (finalArray.toString() === '5,7,5') {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+  else {
+    return false;
+  }
 }
