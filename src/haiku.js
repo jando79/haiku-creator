@@ -18,16 +18,30 @@ export function Vowel(input) {
     }
 }
 
-
 export function Rule1(input) {
-  let vowelCount = 0;
   let array = input.split("");
-  vowelCount = countInstances(input, 'a') + countInstances(input, 'o') + countInstances(input, 'e') + countInstances(input, 'i') + countInstances(input, 'u') + countInstances(input, 'y');
+
+  let vowelCount = 0;
+  const allVowels = ["a", "o", "e", "i", "u", "y"]
+  allVowels.forEach(function(element) {
+    if (countInstances(input, element) > 0) {
+      vowelCount = vowelCount + countInstances(input, element);
+    }
+    });
+
+  let diphCount = 0;
+  const diphVowels = ["oo", "ui", "ea", "ay", "ae", "oi", "ou", "oa", "ee", "ai", "eau", "oy", "ey"];
+  diphVowels.forEach(function(element) {
+    if (countInstances(input, element) > 0) {
+      diphCount = diphCount + countInstances(input, element);
+    }
+  }) 
+
   if (array[array.length - 1] === 'e' && vowelCount > 1) {
-    return vowelCount - 1;
+    return vowelCount - diphCount - 1;
   }
   else {
-    return vowelCount;
+    return vowelCount - diphCount;
   }
-}
+} 
 
