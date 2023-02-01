@@ -45,3 +45,6 @@ export function Rule1(input) {
   }
 } 
 
+export function BreakIntoLines(input) {
+  
+}

@@ -1,13 +1,14 @@
 import { Lines } from './../src/haiku.js';
 import { Vowel } from './../src/haiku.js';
 import { Rule1 } from './../src/haiku.js';
+import { BreakIntoLines } from './../src/haiku.js';
 
 describe('Lines', () => {
 
   test('it should identify that the poem has three lines', () => {
     expect(Lines('A\nB\nC')).toBe(3);
   });
-  
+
 });
 
 describe('Vowel', () => {
@@ -16,7 +17,7 @@ describe('Vowel', () => {
     expect(Vowel('cat')).toBe(true);
     expect(Vowel('rtp')).toBe(false);
   });
-  
+
 });
 
 describe('Rule1', () => {
@@ -36,11 +37,13 @@ describe('Rule1', () => {
     expect(Rule1('loud')).toBe(1); //When two vowels carry one sound (diphthong), they cannot be divided
     expect(Rule1('many')).toBe(2); //The letter “y” is not strictly a vowel but behaves like one.
   });
-  
+
 });
 
-// describe('BreakIntoLines', () => {
+describe('BreakIntoLines', () => {
 
-//   test('it should return 3 separate lines', () => {
-//     expect(Lines('A\nB\nC')).toBe();
-//   });
+  test('it should return three separate lines', () => {
+    expect(BreakIntoLines('A\nB\nC')).toBe([["A"], ["B"], ["C"]]);
+});
+
+});
