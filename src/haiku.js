@@ -1,8 +1,11 @@
 
-'A\nB\nC'
+
 export function Lines(input) {
-  let count = 0;
-  if (input.includes('\n') === true) {
-    return 2;
+  function countInstances(string, word) {
+    return string.split(word).length - 1;
+ }
+
+  if (countInstances(input, "\n") === 2) {
+    return 3;
   }
 }
