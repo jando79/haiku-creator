@@ -4,11 +4,11 @@ export class Haiku {
     this.input = input;
   }
 
-  countInstances = (string, word) => {
+  countInstances(string, word){
     return (string).split(word).length - 1;
   }
 
-  Lines = (input) => {
+  Lines(input){
     if (this.countInstances(input, "\n") === 2) {
       return 3;
     }
