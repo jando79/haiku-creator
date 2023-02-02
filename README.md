@@ -1,6 +1,6 @@
 # Title
 
-##### By _Molly Donegan_
+##### By _Molly Donegan, David Jandron and Asia Kaplanyan_
 
 #### _Description_
 
@@ -33,4 +33,4 @@ _A web application that..._
 
 * _MIT_
 
-Copyright (c) _2023_ _Molly Donegan_
+Copyright (c) _2023_ _Molly Donegan, David Jandron and Asia Kaplanyan_
