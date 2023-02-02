@@ -1,18 +1,16 @@
-# Title
+# Haiku checker and generator
 
 ##### By _Molly Donegan, David Jandron and Asia Kaplanyan_
 
 #### _Description_
 
-_A web application that..._
+_A web application that checks if your poem is a Haiku and generates one for you._
 
 ## Technologies Used
 
 * JavaScript
-* HTML / CSS
-* Boostrap
+* HTML
 * Webpack
-
 
 ## Setup/Installation Requirements
 
@@ -27,7 +25,8 @@ _A web application that..._
 
 ## Known Bugs
 
-* NA
+* doesn't recognize "-es" and "-ed": counts traines and trained as 2 syllables 
+* doesn't work for compound words, when the first word ends with "e": counts something as 3 syllables
 
 ## License
 

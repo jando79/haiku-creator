@@ -21,6 +21,7 @@ describe('Haiku', () => {
 
   test('it should divide a word into syllables following rule1', () => {
     expect(haiku.Rule1('banana')).toBe(3);
+    expect(haiku.Rule1('you')).toBe(1);
     expect(haiku.Rule1('children')).toBe(2);
     expect(haiku.Rule1('the')).toBe(1);
     expect(haiku.Rule1('rabbit')).toBe(2);

@@ -1,4 +1,6 @@
 import { Haiku } from './js/haiku.js';
+import { haikuGenerator } from './js/haiku-generator.js';
+
 
 function handleFormSubmission() {
   const haiku = new Haiku();
@@ -16,8 +18,16 @@ function handleFormSubmission() {
   }
 }
 
+function createHaiku() {
+  event.preventDefault();
+  let randomHaiku = haikuGenerator();
+  document.getElementById("line1").innerText = randomHaiku[0];
+  document.getElementById("line2").innerText = randomHaiku[1];
+  document.getElementById("line3").innerText = randomHaiku[2];
+}
 
 window.addEventListener("load", function () {
   document.querySelector("form#new-form").addEventListener("submit", handleFormSubmission);
+  document.getElementById("generate").addEventListener("click", createHaiku);
 });
 

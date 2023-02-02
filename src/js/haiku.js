@@ -34,14 +34,14 @@ export class Haiku {
     });
 
     let diphCount = 0;
-    const diphVowels = ["oo", "ui", "ea", "ay", "ae", "oi", "ou", "oa", "ee", "ai", "eau", "oy", "ey", "ye"];
+    const diphVowels = ["oo", "ui", "ea", "ay", "ae", "oi", "ou", "oa", "ee", "ai", "eau", "oy", "ey", "ye", "ei", "you", "ya"];
     diphVowels.forEach((element) => {
       if (this.countInstances(input, element) > 0) {
         diphCount = diphCount + this.countInstances(input, element);
       }
     });
 
-    if (array[array.length - 1] === 'e' && vowelCount > 1 && array[array.length - 2] !== 'l' && array[array.length - 2] !== 'e' && array[array.length - 2] !== 'a') {
+    if (array[array.length - 1] === 'e'  && vowelCount > 1 && array[array.length - 2] !== 'l' && array[array.length - 2] !== 'e' && array[array.length - 2] !== 'a') {
       return vowelCount - diphCount - 1;
     }
     else {
