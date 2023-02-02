@@ -7,7 +7,8 @@
         "start": "npm run build && webpack-dev-server --open --mode=development",
         "lint": "eslint src/*.js",
         "test": "jest --coverage",
-        "deploy": "npm run build && gh-pages -d dist"
+        "gh-deploy": "git push origing :gh-pages && git subtree push --prefix dist origing gh-pages",
+        "gh-deploy-init": "git push origing && git subtree push --prefix dist origing gh-pages"
     },
     "keywords": [],
     "author": "",
