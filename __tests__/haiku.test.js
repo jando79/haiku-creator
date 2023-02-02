@@ -58,7 +58,7 @@ describe('Haiku', () => {
 describe('haikuGenerator', () => {
 
   test('it should generate a haiku', () => {
-    expect(haikuGenerator().isArray).toBe(true);
+    expect(haikuGenerator().length).toBe(3);
   });
 
 });

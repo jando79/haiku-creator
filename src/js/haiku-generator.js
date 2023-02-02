@@ -13,6 +13,7 @@ export function haikuGenerator() {
   randomHaiku.push(fiveSyllables[getRandomInt(0, fiveSyllables.length - 1)]);
   randomHaiku.push(sevenSyllables[getRandomInt(0, sevenSyllables.length - 1)]);
   randomHaiku.push(fiveSyllables[getRandomInt(0, fiveSyllables.length - 1)]);
+  randomHaiku = Array.from(randomHaiku);
   return randomHaiku;
 }
 
