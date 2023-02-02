@@ -1,4 +1,5 @@
 import { Haiku } from './../src/js/haiku.js';
+import { haikuGenerator } from './../src/js/haiku-generator.js';
 
 describe('Haiku', () => {
   let haiku;
@@ -50,6 +51,14 @@ describe('Haiku', () => {
     expect(haiku.ifHaiku('My name is Molly\nI love to eat\nThank you')).toBe(false);
     expect(haiku.ifHaiku('My name is Molly\nI love to eat')).toBe(false);
 
+  });
+
+});
+
+describe('haikuGenerator', () => {
+
+  test('it should generate a haiku', () => {
+    expect(haikuGenerator().isArray).toBe(true);
   });
 
 });
