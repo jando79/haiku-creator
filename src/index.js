@@ -1,3 +1,5 @@
+import {Haiku} from './js/haiku.js';
+
 function handleFormSubmission() {
 event.preventDefault();
 let input = document.getElementById("input").value;
