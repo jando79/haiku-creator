@@ -26,7 +26,7 @@ export class Haiku {
   Rule1(input) {
     let array = input.split("");
     let vowelCount = 0;
-    const allVowels = ["a", "o", "e", "i", "u", "y", "A", "O", "E", "I", "U", "Y"]
+    const allVowels = ["a", "o", "e", "i", "u", "y", "A", "O", "E", "I", "U", "Y"];
     allVowels.forEach((element) => {
       if (this.countInstances(input, element) > 0) {
         vowelCount = vowelCount + this.countInstances(input, element);
@@ -39,7 +39,7 @@ export class Haiku {
       if (this.countInstances(input, element) > 0) {
         diphCount = diphCount + this.countInstances(input, element);
       }
-    })
+    });
 
     if (array[array.length - 1] === 'e' && vowelCount > 1 && array[array.length - 2] !== 'l' && array[array.length - 2] !== 'e' && array[array.length - 2] !== 'a') {
       return vowelCount - diphCount - 1;
@@ -66,7 +66,7 @@ export class Haiku {
     let totalCount = 0;
     words.forEach((element) => {
       totalCount = totalCount + this.Rule1(element);
-    })
+    });
     return totalCount;
   }
 
@@ -76,7 +76,7 @@ export class Haiku {
       let newArray = this.BreakIntoLines(input);
       newArray.forEach((element) => {
         finalArray.push(this.CountSyllables(element));
-      })
+      });
       if (finalArray.toString() === '5,7,5') {
         return true;
       }

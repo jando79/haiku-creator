@@ -2,12 +2,12 @@ import { Haiku } from './../src/js/haiku.js';
 
 describe('Haiku', () => {
   let haiku;
-  
+
   beforeEach(() => {
     haiku = new Haiku();
   });
 
-  test('it should identify that the poem has three lines', () => {   
+  test('it should identify that the poem has three lines', () => {
     expect(haiku.Lines('A\nB\nC')).toBe(3);
   });
 
